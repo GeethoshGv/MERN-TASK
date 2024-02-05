@@ -1,8 +1,23 @@
 .nav-div {
   width: 100vw;
   height: 10vh;
-  a {
-    text-decoration: none;
-    color: black;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5rem;
+    padding: 0 5rem;
+    a {
+      text-decoration: none;
+      color: black;
+      h1 {
+        font-size: 1.2rem;
+        margin: 0;
+      }
+    }
   }
 }
