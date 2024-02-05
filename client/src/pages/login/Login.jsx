@@ -1,15 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./login.scss";
 
 const Login = () => {
   return (
     <>
-      <section>
+      <section className="login_section">
         <Link className="backbutton" to="..">
           {" "}
           Back
         </Link>
-        <h1>Login Page</h1>
+        <div className="login-main-div">
+          <h1>Login Page</h1>
+        </div>
       </section>
     </>
   );

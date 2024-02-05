@@ -1,0 +1,17 @@
+.registration_section {
+  width: 100%;
+  height: 90vh;
+  .backbutton {
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .registration-main-div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
