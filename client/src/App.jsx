@@ -4,6 +4,13 @@ import Login from "./pages/login/Login";
 import Registration from "./pages/registration/Registration";
 import Layout from "./Layout";
 import Home from "./pages/homepage/Home";
+
+import axios from "axios";
+
+axios.defaults.baseURL = "http://localhost:5000";
+
+axios.defaults.withCredentials = true;
+
 const App = () => {
   return (
     <BrowserRouter>

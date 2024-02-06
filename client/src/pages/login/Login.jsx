@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./login.scss";
 import { useState } from "react";
+import axios from "axios";
 
 const Login = () => {
   const [data, setData] = useState({
@@ -11,6 +12,7 @@ const Login = () => {
 
   const loginuser = (e) => {
     e.preventDefault();
+    axios.get("/");
   };
 
   return (
