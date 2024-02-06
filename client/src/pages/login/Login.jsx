@@ -4,13 +4,15 @@ import "./login.scss";
 import { useState } from "react";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
 
-  const handleLogin = () => {
-    console.log("Email:", email);
-    console.log("Password:", password);
+  const loginuser = (e) => {
+    e.preventDefault();
   };
+
   return (
     <>
       <section className="login_section">
@@ -22,29 +24,27 @@ const Login = () => {
           <h1>Login Page</h1>
           <form>
             <div className="form-group">
-              <label htmlFor="email">Email:</label>
+              <label>Email:</label>
               <input
                 type="email"
                 id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setData({ ...data, email: e.target.value })}
                 required
+                value={data.email}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="password">Password:</label>
+              <label>Password:</label>
               <input
                 type="password"
                 id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={data.password}
+                onChange={(e) => setData({ ...data, password: e.target.value })}
                 required
               />
             </div>
             <div className="button-div">
-              <button type="button" onClick={handleLogin}>
-                Login
-              </button>
+              <button type="button">Login</button>
             </div>
           </form>
         </div>
