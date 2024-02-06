@@ -41,9 +41,11 @@ const Login = () => {
                 required
               />
             </div>
-            <button type="button" onClick={handleLogin}>
-              Login
-            </button>
+            <div className="button-div">
+              <button type="button" onClick={handleLogin}>
+                Login
+              </button>
+            </div>
           </form>
         </div>
       </section>

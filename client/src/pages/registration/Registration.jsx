@@ -24,8 +24,8 @@ const Registration = () => {
         </Link>
         <div className="registration-main-div">
           <h1>Registration Page</h1>
-          <form>
-            <div className="form-group">
+          <form className="register-form">
+            <div className="form-name">
               <label htmlFor="name">Name:</label>
               <input
                 type="text"
@@ -35,7 +35,7 @@ const Registration = () => {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="form-email">
               <label htmlFor="email">Email:</label>
               <input
                 type="email"
@@ -45,7 +45,7 @@ const Registration = () => {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="form-password">
               <label htmlFor="password">Password:</label>
               <input
                 type="password"
@@ -55,7 +55,7 @@ const Registration = () => {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="form-c-password">
               <label htmlFor="confirmPassword">Confirm Password:</label>
               <input
                 type="password"
@@ -65,9 +65,11 @@ const Registration = () => {
                 required
               />
             </div>
-            <button type="button" onClick={handleRegistration}>
-              Register
-            </button>
+            <div className="button-div">
+              <button type="button" onClick={handleRegistration}>
+                Register
+              </button>
+            </div>
           </form>
         </div>
       </section>

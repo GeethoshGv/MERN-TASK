@@ -4,7 +4,6 @@ import Login from "./pages/login/Login";
 import Registration from "./pages/registration/Registration";
 import Layout from "./Layout";
 import Home from "./pages/homepage/Home";
-import "./style.scss";
 const App = () => {
   return (
     <BrowserRouter>
