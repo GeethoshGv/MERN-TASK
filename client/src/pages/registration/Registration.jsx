@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./registration.scss";
 import { useState } from "react";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const Registration = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -11,8 +14,27 @@ const Registration = () => {
     confirmPassword: "",
   });
 
-  const registeruser = (e) => {
+  const registeruser = async (e) => {
     e.preventDefault();
+    const { name, email, password, conformpassword } = data;
+    try {
+      const { data } = await axios.post("/register", {
+        name,
+        email,
+        password,
+        conformpassword,
+      });
+
+      if (data.error) {
+        toast.error(data.error);
+      } else {
+        setData({});
+        toast.success("login successful");
+        navigate("./login");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
